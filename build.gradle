@@ -2,6 +2,11 @@
 
 buildscript {
     repositories {
+
+        maven {
+            url "http://zixigou.com:8081/artifactory/libs-release-local"
+        }
+
         jcenter()
     }
     dependencies {
@@ -9,11 +14,16 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.4.13"
     }
 }
 
 allprojects {
     repositories {
+        maven {
+            url "http://zixigou.com:8081/artifactory/libs-release-local"
+        }
+
         jcenter()
     }
 }
@@ -34,6 +44,8 @@ ext {
     targetSdkVersion = 25
     support = "25.3.0"
     constraint_layout = "1.0.2"
+
+    test_aar = "0.0.4"
 }
 
 task clean(type: Delete) {
