@@ -29,4 +29,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile "com.burjal.testaar:test:$rootProject.test_aar"
+    compile "com.squareup.okhttp3:okhttp:$rootProject.okhttp"
 }

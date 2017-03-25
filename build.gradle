@@ -2,6 +2,9 @@
 
 buildscript {
     repositories {
+        maven {
+            url "http://zixigou.com:8081/artifactory/jcenter"
+        }
 
         maven {
             url "http://zixigou.com:8081/artifactory/libs-release-local"
@@ -20,6 +23,10 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url "http://zixigou.com:8081/artifactory/jcenter"
+        }
+
         maven {
             url "http://zixigou.com:8081/artifactory/libs-release-local"
         }
@@ -46,6 +53,7 @@ ext {
     constraint_layout = "1.0.2"
 
     test_aar = "0.0.4"
+    okhttp = "3.6.0"
 }
 
 task clean(type: Delete) {
