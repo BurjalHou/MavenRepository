@@ -1,7 +1,5 @@
 # MavenRepository
 
-***
-
 MavenRepository : 自建Maven仓库 - Artifactory 示例
 
 ## 说明
